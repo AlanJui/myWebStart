@@ -49,7 +49,7 @@ module.exports = function (grunt) {
         files: ['Gruntfile.js']
       },
       sass: {
-        files: ['<%= config.app %>/css/{,*/}*.{scss,sass}'],
+        files: ['<%= config.app %>/scss/{,*/}*.{scss,sass}'],
         tasks: ['sass:server', 'autoprefixer']
       },
       css: {
@@ -158,7 +158,7 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= config.app %>/css',
+          cwd: '<%= config.app %>/scss',
           src: ['*.{scss,sass}'],
           dest: '.tmp/css',
           ext: '.css'
@@ -167,7 +167,7 @@ module.exports = function (grunt) {
       server: {
         files: [{
           expand: true,
-          cwd: '<%= config.app %>/css',
+          cwd: '<%= config.app %>/scss',
           src: ['*.{scss,sass}'],
           dest: '.tmp/css',
           ext: '.css'
